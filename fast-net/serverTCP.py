@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import socket
+import os.path
 
 TCP_IP = '0.0.0.0'
 TCP_PORT = 5006
@@ -14,7 +15,7 @@ conn, addr = s.accept()
 while True:
     data = conn.recv(1024)
     print ("Requisicao aceita")
-    arquivo = open('testando.txt', 'rb')
+    arquivo = open(os.path.dirname(__file__) + '/../dist/dummy_file.txt', 'rb')
     pedaco_arquivo = arquivo.read(1024)
     while(pedaco_arquivo):
         conn.send(pedaco_arquivo)
