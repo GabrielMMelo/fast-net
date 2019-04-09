@@ -26,9 +26,9 @@ class DownloadRate:
                 break
         tempo_final = time.time()
 
-        tamanho_arquivo_bits = (os.path.getsize(self.file))/(1024*1024)
-        print (tempo_final-tempo_inicial)
-        print ("Velocidade de download :",  tamanho_arquivo_bits/(tempo_final-tempo_inicial), "Mbs")
+        tamanho_arquivo_bits = (os.path.getsize(os.path.dirname(__file__) + '/' + self.file))/(1024*1024)
+        print "Tempo total gasto:", tempo_final-tempo_inicial, "s"
+        print "Velocidade de download :",  tamanho_arquivo_bits/(tempo_final-tempo_inicial), "Mbs"
 
     def download(self):
         while True:
