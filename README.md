@@ -2,7 +2,7 @@
 
 ## Usage
 ```
-usage: fastnettool.py [-h] [-t] [-d] [-T MAX_TTL] [-c COUNTS] address
+usage: fastnettools.py [-h] [-t] [-d] [-T MAX_TTL] [-c COUNTS] address
 
 positional arguments:
   address               Destination address with ICMP server if using
