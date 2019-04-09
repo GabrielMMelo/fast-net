@@ -16,7 +16,6 @@ class DownloadRate:
 
     def receive_file(self):
         self.s.send(str.encode('requisitando'))
-        arquivo = open(self.file, 'rb')
         tempo_inicial = time.time()
         pedaco_arquivo = self.s.recv(1024)
 
@@ -26,7 +25,6 @@ class DownloadRate:
                 print (pedaco_arquivo.decode())
                 break
         tempo_final = time.time()
-        arquivo.close()
 
         tamanho_arquivo_bits = (os.path.getsize(self.file))/(1024*1024)
         print (tempo_final-tempo_inicial)
@@ -35,7 +33,6 @@ class DownloadRate:
     def download(self):
         while True:
             self.receive_file()
-
             data = self.s.recv(1024)
             if not data:
                 self.s.close()

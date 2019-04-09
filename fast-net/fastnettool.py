@@ -4,7 +4,7 @@ import traceroute
 import downloadrate
 
 parser = argparse.ArgumentParser()
-parser.add_argument("address", help="Destination host address")
+parser.add_argument("address", help="Destination address with ICMP server if using traceroute (-t) parameter, or TCP server address if using downloadrate (-d) parameter")
 parser.add_argument("-t", "--traceroute", action="store_true", dest="traceroute", default=False, help="Execute traceroute tool for `address`")
 parser.add_argument("-d", "--downloadrate", action="store_true", dest="downloadrate", default=False, help="Test download rate transfer")
 parser.add_argument("-T", "--max_ttl", dest="max_ttl", type=int, default=30, help="Max TTL counter")
