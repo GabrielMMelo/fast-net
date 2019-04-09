@@ -6,7 +6,7 @@ import os
 
 
 class DownloadRate:
-    def __init__(self, tcp_ip="melodev.com.br", tcp_port=5006, file="../dist/testando.txt"):
+    def __init__(self, tcp_ip="melodev.com.br", tcp_port=5006, file="../dist/dummy_file.txt"):
         self.tcp_ip = tcp_ip
         self.tcp_port = tcp_port
         self.file = file
