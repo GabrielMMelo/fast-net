@@ -1,4 +1,4 @@
-# fast-net-tools
+# Python ping tool over ICMP protocol (_plus traceroute tool_)
 
 ## Usage
 ```
